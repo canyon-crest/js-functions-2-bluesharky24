@@ -18,8 +18,7 @@
 //         Example: greet("Alice") should return "Hello, Alice!"
 
 function greet(name) {
-  // Write your code here
-
+  return("Hello, " + name + "!");
 }
 
 
@@ -36,10 +35,11 @@ function greet(name) {
 //         First click → returns 1, second → returns 2, etc.
 
 
-
+let count = 0;
 function myFunc() {
   // Write your code here
-
+  count++;
+  return(count);
 }
 
 
@@ -56,8 +56,11 @@ function myFunc() {
 // STEP 3: Return the random number.
 
 function getRandomNum(max) {
-  // Write your code here
-
+  if(isNaN(max) || max <=0){
+    return(0);
+  }
+  let a = Math.floor(Math.random()*max)+1;
+  return(a);
 }
 
 
@@ -70,7 +73,7 @@ function getRandomNum(max) {
 
 function myAdder(x, y) {
   // Write your code here
-
+  return(x+y);
 }
 
 
@@ -88,7 +91,10 @@ function myAdder(x, y) {
 
 function distance(x1, y1, x2, y2) {
   // Write your code here
-
+  let a = Math.pow(x2-x1, 2);
+  let b = Math.pow(y2-y1, 2);
+  let sum = a + b; 
+  return((Math.sqrt(sum)).toFixed(2));
 }
 
 
@@ -102,8 +108,9 @@ function distance(x1, y1, x2, y2) {
 //         Example: tipCalc(50, 20) → tip is 10, total is "60.00"
 
 function tipCalc(bill, tipPercent) {
-  // Write your code here
-
+  let tip = bill*(tipPercent/100);
+  let total = bill+tip;
+  return(total.toFixed(2));
 }
 
 
